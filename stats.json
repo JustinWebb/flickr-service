@@ -1,0 +1,211 @@
+{
+  "errors": [],
+  "warnings": [],
+  "version": "3.11.0",
+  "hash": "45b14665b233432a3c2b",
+  "time": 97,
+  "publicPath": "",
+  "assetsByChunkName": {
+    "main": "bundle.app.js"
+  },
+  "assets": [
+    {
+      "name": "bundle.app.js",
+      "size": 3688,
+      "chunks": [
+        0
+      ],
+      "chunkNames": [
+        "main"
+      ],
+      "emitted": true
+    }
+  ],
+  "filteredAssets": 0,
+  "entrypoints": {
+    "main": {
+      "chunks": [
+        0
+      ],
+      "assets": [
+        "bundle.app.js"
+      ]
+    }
+  },
+  "chunks": [
+    {
+      "id": 0,
+      "rendered": true,
+      "initial": true,
+      "entry": true,
+      "extraAsync": false,
+      "size": 822,
+      "names": [
+        "main"
+      ],
+      "files": [
+        "bundle.app.js"
+      ],
+      "hash": "416b81e89a8d3d57e4f7",
+      "parents": [],
+      "modules": [
+        {
+          "id": 0,
+          "identifier": "/Users/justinwebb/dev/projects/flickr-service/app/app.js",
+          "name": "./app/app.js",
+          "index": 0,
+          "index2": 1,
+          "size": 125,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "assets": [],
+          "issuer": null,
+          "issuerId": null,
+          "issuerName": null,
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [],
+          "usedExports": true,
+          "providedExports": [],
+          "optimizationBailout": [],
+          "depth": 0,
+          "source": "import FlickrService from './api/flickr_service';\n\nconst app = () => {\n  FlickrService.request('summer flowers');\n};\n\napp();\n"
+        },
+        {
+          "id": 1,
+          "identifier": "/Users/justinwebb/dev/projects/flickr-service/app/api/flickr_service.js",
+          "name": "./app/api/flickr_service.js",
+          "index": 1,
+          "index2": 0,
+          "size": 697,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "assets": [],
+          "issuer": "/Users/justinwebb/dev/projects/flickr-service/app/app.js",
+          "issuerId": 0,
+          "issuerName": "./app/app.js",
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 0,
+              "moduleIdentifier": "/Users/justinwebb/dev/projects/flickr-service/app/app.js",
+              "module": "./app/app.js",
+              "moduleName": "./app/app.js",
+              "type": "harmony import",
+              "userRequest": "./api/flickr_service",
+              "loc": "1:0-49"
+            }
+          ],
+          "usedExports": [
+            "default"
+          ],
+          "providedExports": [
+            "default"
+          ],
+          "optimizationBailout": [],
+          "depth": 1,
+          "source": "\nconst FLICKR_API = 'https://api.flickr.com/services/rest/?';\nconst FA_METHOD_SEARCH = 'flickr.photos.search';\n\nexport default class FlickrService {\n  /**\n   * perform a Flickr tag search via GET\n   *\n   * @static\n   * @param {string} query\n   * @memberof FlickrService\n   */\n  static request(query) {\n    const req = Object.assign({ text: query }, {\n      format: 'json',\n      method: FA_METHOD_SEARCH,\n      api_key: '8fcaf784e87fdd001583cf05597a0945',\n      per_page: 50,\n    });\n    const params = Object.keys(req).reduce((acc, elem) => {\n      acc.push(`${elem} + '=' + ${encodeURIComponent(req[elem])}`);\n      return acc;\n    }, []);\n\n    console.log(FLICKR_API + params.join('&'));\n  }\n}\n"
+        }
+      ],
+      "filteredModules": 0,
+      "origins": [
+        {
+          "moduleId": 0,
+          "module": "/Users/justinwebb/dev/projects/flickr-service/app/app.js",
+          "moduleIdentifier": "/Users/justinwebb/dev/projects/flickr-service/app/app.js",
+          "moduleName": "./app/app.js",
+          "loc": "",
+          "name": "main",
+          "reasons": []
+        }
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "id": 0,
+      "identifier": "/Users/justinwebb/dev/projects/flickr-service/app/app.js",
+      "name": "./app/app.js",
+      "index": 0,
+      "index2": 1,
+      "size": 125,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "assets": [],
+      "issuer": null,
+      "issuerId": null,
+      "issuerName": null,
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [],
+      "usedExports": true,
+      "providedExports": [],
+      "optimizationBailout": [],
+      "depth": 0,
+      "source": "import FlickrService from './api/flickr_service';\n\nconst app = () => {\n  FlickrService.request('summer flowers');\n};\n\napp();\n"
+    },
+    {
+      "id": 1,
+      "identifier": "/Users/justinwebb/dev/projects/flickr-service/app/api/flickr_service.js",
+      "name": "./app/api/flickr_service.js",
+      "index": 1,
+      "index2": 0,
+      "size": 697,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "assets": [],
+      "issuer": "/Users/justinwebb/dev/projects/flickr-service/app/app.js",
+      "issuerId": 0,
+      "issuerName": "./app/app.js",
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": 0,
+          "moduleIdentifier": "/Users/justinwebb/dev/projects/flickr-service/app/app.js",
+          "module": "./app/app.js",
+          "moduleName": "./app/app.js",
+          "type": "harmony import",
+          "userRequest": "./api/flickr_service",
+          "loc": "1:0-49"
+        }
+      ],
+      "usedExports": [
+        "default"
+      ],
+      "providedExports": [
+        "default"
+      ],
+      "optimizationBailout": [],
+      "depth": 1,
+      "source": "\nconst FLICKR_API = 'https://api.flickr.com/services/rest/?';\nconst FA_METHOD_SEARCH = 'flickr.photos.search';\n\nexport default class FlickrService {\n  /**\n   * perform a Flickr tag search via GET\n   *\n   * @static\n   * @param {string} query\n   * @memberof FlickrService\n   */\n  static request(query) {\n    const req = Object.assign({ text: query }, {\n      format: 'json',\n      method: FA_METHOD_SEARCH,\n      api_key: '8fcaf784e87fdd001583cf05597a0945',\n      per_page: 50,\n    });\n    const params = Object.keys(req).reduce((acc, elem) => {\n      acc.push(`${elem} + '=' + ${encodeURIComponent(req[elem])}`);\n      return acc;\n    }, []);\n\n    console.log(FLICKR_API + params.join('&'));\n  }\n}\n"
+    }
+  ],
+  "filteredModules": 0,
+  "children": []
+}
